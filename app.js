@@ -1,6 +1,11 @@
 const navButton = document.querySelector('.nav-button');
 const navOpen = document.querySelector('.nav-open');
+const hats = document.querySelector('#hats');
+const hoodie = document.querySelector('#hoodie');
+
 const tl = gsap.timeline({paused: true});
+const tl2 = gsap.timeline({paused: true});
+
 
 
 
@@ -25,8 +30,16 @@ tl.to('.cover', 1, {
     navOpen.style.pointerEvents = 'auto';
     console.log('done');
   }
+},
+)
+;
+
+tl2.to('#hats', 1, {
+  height: '400px'
 }
-);
+)
+
+
 navButton.addEventListener('click', ()=> {
   if(tl.isActive()){
       e.preventDefault();
@@ -41,3 +54,31 @@ function toggleDirection(tween)
 {
   tween.reversed() ? tween.play() : tween.reverse();
 }
+
+
+hats.addEventListener('mouseover', ()=>{
+  gsap.to('#hats', 1, {
+    height: '400px'
+  }
+  )
+})
+
+hats.addEventListener('mouseout',()=> {
+  gsap.to('#hats', 1, {
+    height: '250px'
+  })
+})
+
+hoodie.addEventListener('mouseover', ()=>{
+  gsap.to('#hoodie', 1, {
+    height: '400px'
+  }
+  )
+})
+
+hoodie.addEventListener('mouseout',()=> {
+  gsap.to('#hoodie', 1, {
+    height: '250px'
+  })
+})
+
