@@ -2,9 +2,14 @@ const navButton = document.querySelector('.nav-button');
 const navOpen = document.querySelector('.nav-open');
 const hats = document.querySelector('#hats');
 const hoodie = document.querySelector('#hoodie');
+const hatsLi = document.querySelector('#hats-li');
+const hoodieLi = document.querySelector('#hoodie-li');
 
 const tl = gsap.timeline({paused: true});
-const tl2 = gsap.timeline({paused: true});
+
+const hatsTl = gsap.timeline({paused: true});
+const hoodieTl = gsap.timeline({paused: true});
+
 
 
 
@@ -34,10 +39,21 @@ tl.to('.cover', 1, {
 )
 ;
 
-tl2.to('#hats', 1, {
+hatsTl.to('#hats', 1, {
   height: '400px'
-}
-)
+})
+.to('#hats', 1, {
+  height: '250px'
+})
+
+hoodieTl.to('#hoodie', 1, {
+  height: '400px'
+})
+.to('#hoodie', 1, {
+  height: '250px'
+})
+
+
 
 
 navButton.addEventListener('click', ()=> {
@@ -59,8 +75,7 @@ function toggleDirection(tween)
 hats.addEventListener('mouseover', ()=>{
   gsap.to('#hats', 1, {
     height: '400px'
-  }
-  )
+  })
 })
 
 hats.addEventListener('mouseout',()=> {
@@ -72,8 +87,7 @@ hats.addEventListener('mouseout',()=> {
 hoodie.addEventListener('mouseover', ()=>{
   gsap.to('#hoodie', 1, {
     height: '400px'
-  }
-  )
+  })
 })
 
 hoodie.addEventListener('mouseout',()=> {
@@ -82,3 +96,10 @@ hoodie.addEventListener('mouseout',()=> {
   })
 })
 
+hatsLi.addEventListener('click', ()=>{
+  hatsTl.play()
+})
+
+hoodieLi.addEventListener('click', ()=>{
+  hoodieTl.play()
+})
