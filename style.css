@@ -40,7 +40,7 @@ nav{
   z-index: 2;
   width: 40%;
   height: 20%;
-  color:#622618;
+  color:gray
 }
 .nav-closed{
   display: flex;
@@ -49,7 +49,7 @@ nav{
   height: 20%;
   width: 40%;
   position: absolute;
-  color: #622618;
+  color:gray
 }
 .nav-closed ul{
   display: flex;
@@ -76,11 +76,11 @@ nav{
 .clothing{
 display: flex;
 justify-content: space-around;
-align-items: center;
+align-items: left;
 width: 100%;
 }
 .clothing h2{
-  font-size: 50px;
+  font-size: 40px;
 }
 .clothing ul{
   list-style: none;
@@ -90,7 +90,7 @@ width: 100%;
 }
 .clothing ul li a{
   text-decoration: none;
-  color: #622618;
+  color: gray
 }
 
 .nav-images{
