@@ -7,8 +7,8 @@ const hoodieLi = document.querySelector('#hoodie-li');
 
 const tl = gsap.timeline({paused: true});
 
-const hatsTl = gsap.timeline({paused: true});
-const hoodieTl = gsap.timeline({paused: true});
+//const hatsTl = gsap.timeline({paused: true});
+//const hoodieTl = gsap.timeline({paused: true});
 
 
 
@@ -39,19 +39,19 @@ tl.to('.cover', 1, {
 )
 ;
 
-hatsTl.to('#hats', 1, {
-  height: '400px'
-})
-.to('#hats', 1, {
-  height: '250px'
-})
+// hatsTl.to('#hats', 1, {
+//   height: '400px'
+// })
+// .to('#hats', 1, {
+//   height: '250px'
+// })
 
-hoodieTl.to('#hoodie', 1, {
-  height: '400px'
-})
-.to('#hoodie', 1, {
-  height: '250px'
-})
+// hoodieTl.to('#hoodie', 1, {
+//   height: '400px'
+// })
+// .to('#hoodie', 1, {
+//   height: '250px'
+// })
 
 
 
@@ -62,20 +62,21 @@ navButton.addEventListener('click', ()=> {
       e.stopImmediatePropagation();
       return false;
   }
-  toggleDirection(tl);
+  //toggleDirection(tl);
   tl.play();
   
 });
-function toggleDirection(tween)
-{
-  tween.reversed() ? tween.play() : tween.reverse();
-}
+//function toggleDirection(tween)
+//{
+  //tween.reversed() ? tween.play() : tween.reverse();
+//}
 
 
 hats.addEventListener('mouseover', ()=>{
   gsap.to('#hats', 1, {
     height: '400px'
-  })
+  });
+
 })
 
 hats.addEventListener('mouseout',()=> {
